@@ -23,6 +23,7 @@ radius = 6.0
 size = Vector2(12, 30)
 
 [node name="LargeTree" type="Sprite2D"]
+y_sort_enabled = true
 material = SubResource("ShaderMaterial_6vpey")
 texture = SubResource("AtlasTexture_sx6ol")
 script = ExtResource("2_wjqkr")

@@ -400,11 +400,10 @@ radius = 6.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_djydg"]
 radius = 3.0
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("hit_component")]
+[node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
 script = ExtResource("1_6avc5")
 current_tool = 1
-hit_component = NodePath("HitComponent")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
@@ -447,6 +446,7 @@ Player = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 
 [node name="HitComponent" parent="." instance=ExtResource("10_3xnwo")]
+current_tool = 1
 
 [node name="HitComponentCollisionShape2D" type="CollisionShape2D" parent="HitComponent"]
 shape = SubResource("CircleShape2D_djydg")
