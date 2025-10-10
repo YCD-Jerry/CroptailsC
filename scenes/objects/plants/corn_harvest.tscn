@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c4udouqjpi5vf"]
 
-[ext_resource type="Texture2D" uid="uid://drl7343b2h58" path="res://assets/game/Objects/Basic_Plants.png" id="1_rxr7v"]
+[ext_resource type="Texture2D" uid="uid://drl7343b2h58" path="res://assets/game/Basic_Plants.png" id="1_rxr7v"]
 [ext_resource type="PackedScene" uid="uid://c6d5i2t42abkn" path="res://scenes/components/collectable_component.tscn" id="2_xie17"]
 
 [node name="CornHarvest" type="Sprite2D"]

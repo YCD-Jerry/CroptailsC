@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bk2jtvnmynbew"]
 
-[ext_resource type="Texture2D" uid="uid://drl7343b2h58" path="res://assets/game/Objects/Basic_Plants.png" id="1_rqgx7"]
+[ext_resource type="Texture2D" uid="uid://drl7343b2h58" path="res://assets/game/Basic_Plants.png" id="1_rqgx7"]
 [ext_resource type="Script" uid="uid://8lsw18q7oi3" path="res://scenes/components/collectable_component.gd" id="2_voyel"]
 [ext_resource type="PackedScene" uid="uid://c6d5i2t42abkn" path="res://scenes/components/collectable_component.tscn" id="3_ssyl3"]
 

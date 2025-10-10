@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://dtbt7m1bfggkf"]
+[gd_scene load_steps=13 format=3 uid="uid://dtbt7m1bfggkf"]
 
 [ext_resource type="Theme" uid="uid://chrkpjw15bq3q" path="res://scenes/ui/game_ui_theme.tres" id="1_viw05"]
+[ext_resource type="Script" uid="uid://blfu563mvgcyq" path="res://scenes/ui/inventory_panel_1.gd" id="2_erbvg"]
 [ext_resource type="Texture2D" uid="uid://cjfxc10arqjbc" path="res://assets/game/Objects/Basic_tools_and_meterials.png" id="2_w7fq1"]
-[ext_resource type="Texture2D" uid="uid://drl7343b2h58" path="res://assets/game/Objects/Basic_Plants.png" id="3_erbvg"]
+[ext_resource type="Texture2D" uid="uid://drl7343b2h58" path="res://assets/game/Basic_Plants.png" id="3_erbvg"]
 [ext_resource type="Texture2D" uid="uid://bk81nnohh1jl8" path="res://assets/game/Objects/Egg_item.png" id="4_77pmb"]
 [ext_resource type="Texture2D" uid="uid://c7klb48gq53qm" path="res://assets/game/Objects/Simple_Milk_and_grass_item.png" id="5_ebton"]
 
@@ -34,6 +35,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 theme = ExtResource("1_viw05")
 theme_type_variation = &"DarkWoodPanel"
+script = ExtResource("2_erbvg")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -55,7 +57,7 @@ layout_mode = 2
 size_flags_vertical = 0
 texture = SubResource("AtlasTexture_nxx0j")
 
-[node name="LogsLabel" type="Label" parent="MarginContainer/VBoxContainer/Logs"]
+[node name="LogLabel" type="Label" parent="MarginContainer/VBoxContainer/Logs"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -72,7 +74,7 @@ layout_mode = 2
 size_flags_vertical = 0
 texture = SubResource("AtlasTexture_ofg2j")
 
-[node name="StonesLabel" type="Label" parent="MarginContainer/VBoxContainer/Stone"]
+[node name="StoneLabel" type="Label" parent="MarginContainer/VBoxContainer/Stone"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -89,7 +91,7 @@ layout_mode = 2
 size_flags_vertical = 0
 texture = SubResource("AtlasTexture_od3eq")
 
-[node name="CornsLabel" type="Label" parent="MarginContainer/VBoxContainer/Corn"]
+[node name="CornLabel" type="Label" parent="MarginContainer/VBoxContainer/Corn"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -106,7 +108,7 @@ layout_mode = 2
 size_flags_vertical = 0
 texture = SubResource("AtlasTexture_o560s")
 
-[node name="TomatosLabel" type="Label" parent="MarginContainer/VBoxContainer/Tomato"]
+[node name="TomatoLabel" type="Label" parent="MarginContainer/VBoxContainer/Tomato"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -123,7 +125,7 @@ layout_mode = 2
 size_flags_vertical = 0
 texture = SubResource("AtlasTexture_umfc7")
 
-[node name="LogsLabel" type="Label" parent="MarginContainer/VBoxContainer/Egg"]
+[node name="EggLabel" type="Label" parent="MarginContainer/VBoxContainer/Egg"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -140,7 +142,7 @@ layout_mode = 2
 size_flags_vertical = 0
 texture = SubResource("AtlasTexture_u2ioo")
 
-[node name="LogsLabel" type="Label" parent="MarginContainer/VBoxContainer/Milk"]
+[node name="MilkLabel" type="Label" parent="MarginContainer/VBoxContainer/Milk"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
