@@ -1,6 +1,6 @@
 extends Node2D
 
-var corn_harvest_scene = preload("res://scenes/objects/plants/corn_harvest.tscn")
+var tomato_harvest_scene = preload("res://scenes/objects/plants/tomato_harvest.tscn")
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var watering_particles: GPUParticles2D = $WateringParticles
@@ -9,6 +9,7 @@ var corn_harvest_scene = preload("res://scenes/objects/plants/corn_harvest.tscn"
 @onready var hurt_component: HurtComponent = $HurtComponent
 
 var growth_state: DataTypes.GrowthStates = DataTypes.GrowthStates.Seed
+var start_tomato_frame_offset: int = 6
 
 func _ready() -> void:
 	watering_particles.emitting = false
@@ -20,7 +21,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	growth_state = growth_cycle_component.get_current_growth_state()
-	sprite_2d.frame = growth_state
+	sprite_2d.frame = growth_state + start_tomato_frame_offset
 
 	if growth_state == DataTypes.GrowthStates.Maturity:
 		flowering_particles.emitting = true
@@ -36,6 +37,6 @@ func on_crop_maturity() -> void:
 	flowering_particles.emitting = true
 
 func on_crop_harvesting() -> void:
-	var corn_harvest_instance = corn_harvest_scene.instantiate() as Node2D
-	corn_harvest_instance.global_position = global_position
-	get_parent().add_child(corn_harvest_instance)
+	var tomato_harvest_instance = tomato_harvest_scene.instantiate() as Node2D
+	tomato_harvest_instance.global_position = global_position
+	get_parent().add_child(tomato_harvest_instance)

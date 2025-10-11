@@ -1,23 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqt32ra5mhsl0"]
+[gd_scene load_steps=8 format=3 uid="uid://bqt32ra5mhsl0"]
 
-[ext_resource type="Texture2D" uid="uid://drl7343b2h58" path="res://assets/game/Basic_Plants.png" id="1_lfpcd"]
+[ext_resource type="Script" uid="uid://b4jniuqtd8fx4" path="res://scenes/objects/plants/corn.gd" id="1_hgaca"]
+[ext_resource type="Texture2D" uid="uid://drl7343b2h58" path="res://assets/game/Objects/Basic_Plants.png" id="1_lfpcd"]
 [ext_resource type="PackedScene" uid="uid://cv1fu1lvgx4uk" path="res://scenes/components/hurt_component.tscn" id="2_xskjd"]
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ulegu"]
-particle_flag_disable_z = true
-angle_min = -180.0
-angle_max = 180.0
-angular_velocity_min = -300.0
-angular_velocity_max = 300.0
-orbit_velocity_min = -1.0
-orbit_velocity_max = 1.0
-gravity = Vector3(0, -10, 0)
-color = Color(0.22035, 0.395279, 1, 1)
+[ext_resource type="PackedScene" uid="uid://c1n511xrkpvww" path="res://scenes/objects/plants/watering_particles.tscn" id="3_q3ekf"]
+[ext_resource type="PackedScene" uid="uid://b1o5a66qeq1jw" path="res://scenes/objects/plants/growth_cycle_component.tscn" id="4_310os"]
+[ext_resource type="PackedScene" uid="uid://bxckj4ms2so5t" path="res://scenes/objects/plants/flowering_particles.tscn" id="6_g345r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ckgas"]
 size = Vector2(14, 8)
 
 [node name="Corn" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_hgaca")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -4)
@@ -26,9 +21,8 @@ hframes = 6
 vframes = 2
 frame = 1
 
-[node name="WateringParticles" type="GPUParticles2D" parent="."]
-amount = 16
-process_material = SubResource("ParticleProcessMaterial_ulegu")
+[node name="WateringParticles" parent="." instance=ExtResource("3_q3ekf")]
+visible = true
 
 [node name="HurtComponent" parent="." instance=ExtResource("2_xskjd")]
 position = Vector2(0, -4)
@@ -37,3 +31,7 @@ tool = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
 position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_ckgas")
+
+[node name="FloweringParticles" parent="." instance=ExtResource("6_g345r")]
+
+[node name="GrowthCycleComponent" parent="." instance=ExtResource("4_310os")]

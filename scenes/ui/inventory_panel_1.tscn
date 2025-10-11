@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://chrkpjw15bq3q" path="res://scenes/ui/game_ui_theme.tres" id="1_viw05"]
 [ext_resource type="Script" uid="uid://blfu563mvgcyq" path="res://scenes/ui/inventory_panel_1.gd" id="2_erbvg"]
 [ext_resource type="Texture2D" uid="uid://cjfxc10arqjbc" path="res://assets/game/Objects/Basic_tools_and_meterials.png" id="2_w7fq1"]
-[ext_resource type="Texture2D" uid="uid://drl7343b2h58" path="res://assets/game/Basic_Plants.png" id="3_erbvg"]
+[ext_resource type="Texture2D" uid="uid://drl7343b2h58" path="res://assets/game/Objects/Basic_Plants.png" id="3_erbvg"]
 [ext_resource type="Texture2D" uid="uid://bk81nnohh1jl8" path="res://assets/game/Objects/Egg_item.png" id="4_77pmb"]
 [ext_resource type="Texture2D" uid="uid://c7klb48gq53qm" path="res://assets/game/Objects/Simple_Milk_and_grass_item.png" id="5_ebton"]
 

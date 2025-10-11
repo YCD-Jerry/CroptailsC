@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://b4udfx5kvmp7s"]
+[gd_scene load_steps=10 format=4 uid="uid://b4udfx5kvmp7s"]
 
 [ext_resource type="TileSet" uid="uid://bh1ytey450d1d" path="res://tilesets/game_tile_set.tres" id="1_cvuan"]
 [ext_resource type="PackedScene" uid="uid://c0t8x74jcbubv" path="res://scenes/characters/player/player.tscn" id="2_kxmxa"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://ba0m8nxbaw4tx" path="res://scenes/objects/trees/log.tscn" id="5_7fi45"]
 [ext_resource type="PackedScene" uid="uid://isjek8vnwkjp" path="res://scenes/objects/milk.tscn" id="6_5f7m3"]
 [ext_resource type="PackedScene" uid="uid://dftkyhxgarngq" path="res://scenes/ui/game_screen.tscn" id="7_jioxk"]
+[ext_resource type="PackedScene" uid="uid://c4udouqjpi5vf" path="res://scenes/objects/plants/corn_harvest.tscn" id="8_kxmxa"]
+[ext_resource type="PackedScene" uid="uid://bk2jtvnmynbew" path="res://scenes/objects/plants/tomato_harvest.tscn" id="9_gttdp"]
 
 [node name="TestSceneInventoryManagement" type="Node2D"]
 y_sort_enabled = true
@@ -26,21 +28,33 @@ tile_set = ExtResource("1_cvuan")
 position = Vector2(302, 215)
 
 [node name="Egg" parent="." instance=ExtResource("3_gttdp")]
+y_sort_enabled = true
 position = Vector2(332, 215)
 
 [node name="Stone" parent="." instance=ExtResource("4_gqv46")]
+y_sort_enabled = true
 position = Vector2(356, 217)
 
 [node name="Log" parent="." instance=ExtResource("5_7fi45")]
+y_sort_enabled = true
 position = Vector2(406, 195)
 
 [node name="Milk" parent="." instance=ExtResource("6_5f7m3")]
+y_sort_enabled = true
 position = Vector2(337, 193)
 
 [node name="GameScreen" parent="." instance=ExtResource("7_jioxk")]
 
 [node name="Log2" parent="." instance=ExtResource("5_7fi45")]
+y_sort_enabled = true
 position = Vector2(364, 177)
 
 [node name="Log3" parent="." instance=ExtResource("5_7fi45")]
+y_sort_enabled = true
 position = Vector2(341, 158)
+
+[node name="CornHarvest" parent="." instance=ExtResource("8_kxmxa")]
+position = Vector2(311, 185)
+
+[node name="TomatoHarvest" parent="." instance=ExtResource("9_gttdp")]
+position = Vector2(280, 190)
