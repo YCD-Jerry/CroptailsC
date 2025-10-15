@@ -1,0 +1,103 @@
+[gd_resource type="Theme" load_steps=18 format=3 uid="uid://c7yj872fkxmy0"]
+
+[ext_resource type="Texture2D" uid="uid://ddc8f6s0scgqh" path="res://assets/ui/basic_ui_sprites.png" id="1_2dxqj"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vohf8"]
+load_path = "res://.godot/imported/basic_ui_sprites.png-f1365ff47f1f008f610f3c558cf47256.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6mw1"]
+atlas = SubResource("CompressedTexture2D_vohf8")
+region = Rect2(59, 11, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4hn52"]
+texture = SubResource("AtlasTexture_o6mw1")
+texture_margin_left = 4.42245
+texture_margin_top = 4.5453
+texture_margin_right = 3.93107
+texture_margin_bottom = 4.29961
+region_rect = Rect2(0, 0, 26, 26)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_82brd"]
+load_path = "res://.godot/imported/basic_ui_sprites.png-f1365ff47f1f008f610f3c558cf47256.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5lnk"]
+atlas = SubResource("CompressedTexture2D_82brd")
+region = Rect2(59, 59, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kggf5"]
+texture = SubResource("AtlasTexture_n5lnk")
+texture_margin_left = 4.42245
+texture_margin_top = 4.5453
+texture_margin_right = 3.93107
+texture_margin_bottom = 4.29961
+region_rect = Rect2(0, 0, 26, 26)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o874d"]
+load_path = "res://.godot/imported/basic_ui_sprites.png-f1365ff47f1f008f610f3c558cf47256.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sauf3"]
+atlas = SubResource("CompressedTexture2D_o874d")
+region = Rect2(59, 59, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3j4pf"]
+texture = SubResource("AtlasTexture_sauf3")
+texture_margin_left = 4.42245
+texture_margin_top = 4.5453
+texture_margin_right = 3.93107
+texture_margin_bottom = 4.29961
+region_rect = Rect2(0, 0, 26, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj8v1"]
+atlas = ExtResource("1_2dxqj")
+region = Rect2(59, 155, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gtcgs"]
+texture = SubResource("AtlasTexture_rj8v1")
+texture_margin_left = 4.42245
+texture_margin_top = 4.5453
+texture_margin_right = 3.93107
+texture_margin_bottom = 4.29961
+region_rect = Rect2(0, 0, 26, 26)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qt7r4"]
+load_path = "res://.godot/imported/basic_ui_sprites.png-f1365ff47f1f008f610f3c558cf47256.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2w7f"]
+atlas = SubResource("CompressedTexture2D_qt7r4")
+region = Rect2(59, 107, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cgx1j"]
+texture = SubResource("AtlasTexture_s2w7f")
+texture_margin_left = 4.42245
+texture_margin_top = 4.5453
+texture_margin_right = 3.93107
+texture_margin_bottom = 4.29961
+region_rect = Rect2(0, 0, 26, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhvec"]
+atlas = ExtResource("1_2dxqj")
+region = Rect2(275, 212, 90, 25)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bx3s5"]
+texture = SubResource("AtlasTexture_jhvec")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(0, 0, 90, 25)
+
+[resource]
+Button/styles/disabled = SubResource("StyleBoxTexture_4hn52")
+Button/styles/focus = SubResource("StyleBoxTexture_kggf5")
+Button/styles/hover = SubResource("StyleBoxTexture_3j4pf")
+Button/styles/normal = SubResource("StyleBoxTexture_gtcgs")
+Button/styles/pressed = SubResource("StyleBoxTexture_cgx1j")
+CharacterNameText/base_type = &"RichTextLabel"
+CharacterNameText/font_sizes/normal_font_size = 14
+DialogueText/base_type = &"RichTextLabel"
+DialogueText/font_sizes/normal_font_size = 12
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 0
+Panel/styles/panel = SubResource("StyleBoxTexture_bx3s5")
