@@ -8,3 +8,37 @@ var tomato_harvest_scene = preload("res://scenes/objects/plants/tomato_harvest.t
 @export var dialogue_start_command: String
 @export var food_drop_height: int = 40
 @export var reward_output_radius: int = 20
+@export var output_reward_scenes: Array[PackedScene] = []
+
+@onready var interactable_component: InteractableComponent = $InteractableComponent
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var feed_component: FeedComponent = $FeedComponent
+@onready var interactable_label_component: Control = $InteractableLabelComponent
+
+var in_range: bool
+var is_chest_open: bool
+
+func _ready() -> void:
+	interactable_component.interactable_activated.connect(on_interactable_activated)
+	interactable_component.interactable_deactivated.connect(on_interactable_deactivated)
+	interactable_label_component.hide()
+
+func on_interactable_activated() -> void:
+	interactable_label_component.show()
+	in_range = true
+	
+func on_interactable_deactivated() -> void:
+	interactable_label_component.hide()
+	in_range = false
+	
+func _unhanded_input(event:InputEvent) -> void:
+	if in_range:
+		if event.is_action_pressed("show_dialogue"):
+			interactable_label_component.hide()
+			animated_sprite_2d.play("chest_open")
+			is_chest_open = true
+			 
+			#create some dialogue for the chest
+			
+		
+	
