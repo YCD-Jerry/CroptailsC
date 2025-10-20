@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://dcd7kooas27ul" path="res://scenes/components/feed_component.gd" id="1_ltfn0"]
 
 [node name="FeedComponent" type="Area2D"]
-collision_layer = 17
-collision_mask = 129
+collision_layer = 16
+collision_mask = 128
 script = ExtResource("1_ltfn0")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

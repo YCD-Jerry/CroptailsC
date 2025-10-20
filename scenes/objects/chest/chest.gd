@@ -13,6 +13,7 @@ var tomato_harvest_scene = preload("res://scenes/objects/plants/tomato_harvest.t
 @onready var interactable_component: InteractableComponent = $InteractableComponent
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var feed_component: FeedComponent = $FeedComponent
+@onready var reward_marker: Marker2D = $RewardMarker
 @onready var interactable_label_component: Control = $InteractableLabelComponent
 
 var in_range: bool
@@ -28,10 +29,14 @@ func on_interactable_activated() -> void:
 	in_range = true
 	
 func on_interactable_deactivated() -> void:
+	if is_chest_open:
+		animated_sprite_2d.play("chest_close")
+		
+	is_chest_open = false
 	interactable_label_component.hide()
 	in_range = false
 	
-func _unhanded_input(event:InputEvent) -> void:
+func _unhandled_input(event:InputEvent) -> void:
 	if in_range:
 		if event.is_action_pressed("show_dialogue"):
 			interactable_label_component.hide()

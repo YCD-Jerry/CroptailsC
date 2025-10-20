@@ -21,8 +21,10 @@ tile_set = ExtResource("1_eoc6g")
 
 [node name="Player" parent="." instance=ExtResource("2_28ly8")]
 position = Vector2(302, 215)
+collision_layer = 3
+collision_mask = 5
 
 [node name="Chest" parent="." instance=ExtResource("3_0qf2n")]
-position = Vector2(343, 194)
+position = Vector2(333, 184)
 
 [node name="GameScreen" parent="." instance=ExtResource("4_uhn3q")]
