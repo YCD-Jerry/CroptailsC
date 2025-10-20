@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="CropTails"
-run/main_scene="uid://bxb3suijeam5q"
+run/main_scene="uid://bx0dy5r8ngklt"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
