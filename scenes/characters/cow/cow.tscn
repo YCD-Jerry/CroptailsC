@@ -58,6 +58,7 @@ animations = [{
 size = Vector2(13, 10)
 
 [node name="Cow" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_j7g5r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
