@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://cqldf6rfg1ymm"]
+[gd_scene load_steps=15 format=4 uid="uid://cqldf6rfg1ymm"]
 
 [ext_resource type="PackedScene" uid="uid://vxkibss7kg66" path="res://audio/music/on_the_farm_music.tscn" id="1_dga24"]
 [ext_resource type="TileSet" uid="uid://bh1ytey450d1d" path="res://tilesets/game_tile_set.tres" id="1_ksju7"]
@@ -9,6 +9,9 @@
 [ext_resource type="Script" uid="uid://do8fv7bo20fqc" path="res://scenes/components/field_cursor_component.gd" id="4_dga24"]
 [ext_resource type="Script" uid="uid://bab3uco7rua1x" path="res://scenes/test/crops_cursor_component.gd" id="5_qxy0u"]
 [ext_resource type="PackedScene" uid="uid://ky0750bt2ve4" path="res://scenes/characters/guide/guide.tscn" id="5_sk5k4"]
+[ext_resource type="PackedScene" uid="uid://dvp7g8ewj06wx" path="res://scenes/objects/chest/chest.tscn" id="10_iav0o"]
+[ext_resource type="PackedScene" uid="uid://isjek8vnwkjp" path="res://scenes/objects/milk.tscn" id="11_dnkej"]
+[ext_resource type="PackedScene" uid="uid://bq8yvmqokd4ay" path="res://scenes/objects/egg.tscn" id="12_mm8aj"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_x42e6"]
 vertices = PackedVector2Array(359, 138, 359, 216.523, 270.023, 212.398, 267.023, 184.289, 235.32, 138, 236.711, 183.313)
@@ -24,6 +27,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(251, 128, 225, 128, 227
 y_sort_enabled = true
 
 [node name="OnTheFarmMusic" parent="." instance=ExtResource("1_dga24")]
+autoplay = true
 
 [node name="GameTileMap" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -111,3 +115,13 @@ position = Vector2(475, 316)
 
 [node name="Guide" parent="." instance=ExtResource("5_sk5k4")]
 position = Vector2(203, 249)
+
+[node name="CowPastureBox" parent="." instance=ExtResource("10_iav0o")]
+position = Vector2(386, 374)
+dialogue_start_command = "start_cow_pasture_box"
+output_reward_scenes = Array[PackedScene]([ExtResource("11_dnkej")])
+
+[node name="ChickenPastureBox" parent="." instance=ExtResource("10_iav0o")]
+position = Vector2(309, 246)
+dialogue_start_command = "start_chicken_pasture_box"
+output_reward_scenes = Array[PackedScene]([ExtResource("12_mm8aj")])
