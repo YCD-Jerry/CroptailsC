@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://bxb3suijeam5q"]
+[gd_scene load_steps=7 format=4 uid="uid://bxb3suijeam5q"]
 
 [ext_resource type="TileSet" uid="uid://bh1ytey450d1d" path="res://tilesets/game_tile_set.tres" id="1_mapoa"]
 [ext_resource type="PackedScene" uid="uid://c0t8x74jcbubv" path="res://scenes/characters/player/player.tscn" id="2_ff0kp"]
 [ext_resource type="PackedScene" uid="uid://cbtdi1olmj2ga" path="res://scenes/components/field_cursor_components.tscn" id="2_mapoa"]
 [ext_resource type="PackedScene" uid="uid://dftkyhxgarngq" path="res://scenes/ui/game_screen.tscn" id="3_aolun"]
-[ext_resource type="Script" uid="uid://do8fv7bo20fqc" path="res://scenes/components/field_cursor_component.gd" id="3_mapoa"]
 [ext_resource type="PackedScene" uid="uid://dfxolmgtkicjl" path="res://scenes/components/day_night_cycle_component.tscn" id="4_bb1mf"]
 [ext_resource type="Script" uid="uid://bab3uco7rua1x" path="res://scenes/test/crops_cursor_component.gd" id="4_ff0kp"]
 
@@ -26,7 +25,6 @@ tile_set = ExtResource("1_mapoa")
 [node name="CropFields" type="Node2D" parent="."]
 
 [node name="FieldCursorComponent" parent="." node_paths=PackedStringArray("grass_tilemap_layer", "tilled_soil_tilemap_layer") instance=ExtResource("2_mapoa")]
-script = ExtResource("3_mapoa")
 grass_tilemap_layer = NodePath("../GameTileMap/Grass")
 tilled_soil_tilemap_layer = NodePath("../GameTileMap/TilledSoil")
 

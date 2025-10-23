@@ -36,15 +36,15 @@ func add_crop() -> void:
 		if ToolManager.selected_tool == DataTypes.Tools.PlantCorn:
 			var corn_instance = corn_plant_scene.instantiate() as Node2D
 			corn_instance.global_position = local_cell_position
-			get_parent().find_child("CropFields").add_child(corn_instance)
+			get_parent().find_child("Level1").add_child(corn_instance)
 		if ToolManager.selected_tool == DataTypes.Tools.PlantTomato:
 			var tomato_instance = tomato_plant_scene.instantiate() as Node2D
 			tomato_instance.global_position = local_cell_position
-			get_parent().find_child("CropFields").add_child(tomato_instance)
+			get_parent().find_child("Level1").add_child(tomato_instance)
 
 func remove_crop() -> void:
 	if distance < 20.0:
-		var crop_nodes = get_parent().find_child("CropFields").get_children()
+		var crop_nodes = get_parent().find_child("Level1").get_children()
 		for node: Node2D in crop_nodes:
 			if node.global_position == local_cell_position:
 				node.queue_free()

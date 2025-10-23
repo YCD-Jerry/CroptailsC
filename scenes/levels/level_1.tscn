@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://cqldf6rfg1ymm"]
+[gd_scene load_steps=14 format=4 uid="uid://cqldf6rfg1ymm"]
 
 [ext_resource type="PackedScene" uid="uid://vxkibss7kg66" path="res://audio/music/on_the_farm_music.tscn" id="1_dga24"]
 [ext_resource type="TileSet" uid="uid://bh1ytey450d1d" path="res://tilesets/game_tile_set.tres" id="1_ksju7"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cj2doadhbgum6" path="res://scenes/characters/chicken/chicken.tscn" id="3_nsrm0"]
 [ext_resource type="PackedScene" uid="uid://cbtdi1olmj2ga" path="res://scenes/components/field_cursor_components.tscn" id="3_s8va5"]
 [ext_resource type="PackedScene" uid="uid://b6041fmf4ksh0" path="res://scenes/characters/cow/cow.tscn" id="4_6761a"]
-[ext_resource type="Script" uid="uid://do8fv7bo20fqc" path="res://scenes/components/field_cursor_component.gd" id="4_dga24"]
 [ext_resource type="Script" uid="uid://bab3uco7rua1x" path="res://scenes/test/crops_cursor_component.gd" id="5_qxy0u"]
 [ext_resource type="PackedScene" uid="uid://ky0750bt2ve4" path="res://scenes/characters/guide/guide.tscn" id="5_sk5k4"]
 [ext_resource type="PackedScene" uid="uid://dvp7g8ewj06wx" path="res://scenes/objects/chest/chest.tscn" id="10_iav0o"]
@@ -63,7 +62,6 @@ tile_set = ExtResource("1_ksju7")
 position = Vector2(461, 242)
 
 [node name="FieldCursorComponent" parent="." node_paths=PackedStringArray("grass_tilemap_layer", "tilled_soil_tilemap_layer") instance=ExtResource("3_s8va5")]
-script = ExtResource("4_dga24")
 grass_tilemap_layer = NodePath("../GameTileMap/Grass")
 tilled_soil_tilemap_layer = NodePath("../GameTileMap/TilledSoil")
 

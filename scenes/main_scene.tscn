@@ -8,7 +8,6 @@
 [node name="MainScene" type="Node"]
 
 [node name="DayNightCycleComponent" parent="." instance=ExtResource("1_7ykc4")]
-visible = false
 
 [node name="LevelRoot" type="Node2D" parent="."]
 y_sort_enabled = true
