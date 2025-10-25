@@ -16,6 +16,8 @@ y_sort_enabled = true
 
 [node name="Player" parent="LevelRoot" instance=ExtResource("3_pu3yx")]
 position = Vector2(169, 186)
+collision_layer = 3
+collision_mask = 5
 
 [node name="Camera2D" type="Camera2D" parent="LevelRoot/Player"]
 
