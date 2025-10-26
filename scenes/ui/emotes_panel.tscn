@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://oa7y8kn0lede"]
+[gd_scene load_steps=23 format=3 uid="uid://oa7y8kn0lede"]
 
 [ext_resource type="Theme" uid="uid://chrkpjw15bq3q" path="res://scenes/ui/game_ui_theme.tres" id="1_157xx"]
 [ext_resource type="Script" uid="uid://drklbead7roc4" path="res://scenes/ui/emotes_panel.gd" id="2_gdn4g"]
@@ -43,10 +43,6 @@ region = Rect2(96, 64, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_wthpd"]
 atlas = ExtResource("3_jyaba")
 region = Rect2(128, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1758g"]
-atlas = ExtResource("3_jyaba")
-region = Rect2(64, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nl02a"]
 atlas = ExtResource("3_jyaba")
@@ -134,9 +130,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1758g")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_nl02a")
 }, {
 "duration": 1.0,
@@ -199,7 +192,7 @@ grow_vertical = 2
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Emote"]
 position = Vector2(20, 22)
 sprite_frames = SubResource("SpriteFrames_5nowc")
-animation = &"emote_2_smile"
+animation = &"emote_1_idle"
 autoplay = "emote_1_idle"
 
 [node name="EmoteIdleTimer" type="Timer" parent="."]
