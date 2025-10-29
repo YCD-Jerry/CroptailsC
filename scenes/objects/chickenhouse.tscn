@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://3w34j2dhi2vr"]
+
+[ext_resource type="Texture2D" uid="uid://b8senbhq21rl1" path="res://assets/game/Objects/Free_Chicken_House.png" id="1_f04ol"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v03qu"]
+atlas = ExtResource("1_f04ol")
+
+[node name="Chickenhouse" type="Sprite2D"]
+texture = SubResource("AtlasTexture_v03qu")

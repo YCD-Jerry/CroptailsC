@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://m4gibqopm5gf"]
+
+[ext_resource type="Texture2D" uid="uid://hd0204uuoygw" path="res://assets/game/Objects/Wood_Bridge.png" id="1_20ps4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pexfk"]
+atlas = ExtResource("1_20ps4")
+region = Rect2(38, 16, 35, 16)
+
+[node name="Bridge" type="Sprite2D"]
+texture = SubResource("AtlasTexture_pexfk")
