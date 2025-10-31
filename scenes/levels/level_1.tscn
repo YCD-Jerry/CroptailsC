@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=4 uid="uid://cqldf6rfg1ymm"]
+[gd_scene load_steps=95 format=4 uid="uid://cqldf6rfg1ymm"]
 
 [ext_resource type="PackedScene" uid="uid://vxkibss7kg66" path="res://audio/music/on_the_farm_music.tscn" id="1_dga24"]
 [ext_resource type="TileSet" uid="uid://bh1ytey450d1d" path="res://tilesets/game_tile_set.tres" id="1_ksju7"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://isjek8vnwkjp" path="res://scenes/objects/milk.tscn" id="11_dnkej"]
 [ext_resource type="PackedScene" uid="uid://bq8yvmqokd4ay" path="res://scenes/objects/egg.tscn" id="12_mm8aj"]
 [ext_resource type="PackedScene" uid="uid://bkq66gbv3ic3w" path="res://scenes/objects/bridge.tscn" id="16_iwr0g"]
+[ext_resource type="PackedScene" uid="uid://m4gibqopm5gf" path="res://scenes/objects/bridge_2.tscn" id="17_bahl2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wtwp4"]
 resource_local_to_scene = true
@@ -447,6 +448,36 @@ shader = ExtResource("4_mm8aj")
 shader_parameter/shake_intensity = 0.0
 shader_parameter/shake_speed = 20.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_st6wj"]
+resource_local_to_scene = true
+shader = ExtResource("4_mm8aj")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_35oph"]
+resource_local_to_scene = true
+shader = ExtResource("4_mm8aj")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h8f0m"]
+resource_local_to_scene = true
+shader = ExtResource("4_mm8aj")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8n5h7"]
+resource_local_to_scene = true
+shader = ExtResource("4_mm8aj")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tdo0a"]
+resource_local_to_scene = true
+shader = ExtResource("4_mm8aj")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
+
 [node name="Level1" type="Node2D"]
 y_sort_enabled = true
 
@@ -466,6 +497,26 @@ tile_set = ExtResource("1_ksju7")
 
 [node name="LargeHouse" parent="GameTileMap/Grass" instance=ExtResource("2_6iamk")]
 position = Vector2(469, 276)
+
+[node name="Bridge" parent="GameTileMap/Grass" instance=ExtResource("16_iwr0g")]
+position = Vector2(382.5, 105)
+scale = Vector2(1.38571, 1.25)
+
+[node name="Bridge2" parent="GameTileMap/Grass" instance=ExtResource("16_iwr0g")]
+position = Vector2(696.5, 688)
+scale = Vector2(2.15714, 1.5625)
+
+[node name="Bridge3" parent="GameTileMap/Grass" instance=ExtResource("16_iwr0g")]
+position = Vector2(-0.250025, 373.5)
+scale = Vector2(1.52857, 1.5625)
+
+[node name="Bridge4" parent="GameTileMap/Grass" instance=ExtResource("17_bahl2")]
+position = Vector2(342.5, 493.375)
+scale = Vector2(2, 1.86429)
+
+[node name="Bridge6" parent="GameTileMap/Grass" instance=ExtResource("17_bahl2")]
+position = Vector2(1214.5, 569.25)
+scale = Vector2(1.625, 2.15714)
 
 [node name="TilledSoil" type="TileMapLayer" parent="GameTileMap"]
 tile_set = ExtResource("1_ksju7")
@@ -667,6 +718,9 @@ position = Vector2(88, 576)
 material = SubResource("ShaderMaterial_yhfkw")
 position = Vector2(86, 330)
 
+[node name="Chest" parent="GameTileMap/Objects" instance=ExtResource("10_iav0o")]
+position = Vector2(173, 350)
+
 [node name="Houses" type="Node" parent="GameTileMap"]
 
 [node name="SmallTree" parent="GameTileMap" instance=ExtResource("5_wtwp4")]
@@ -830,14 +884,22 @@ position = Vector2(1236, 59)
 material = SubResource("ShaderMaterial_dy85j")
 position = Vector2(1533, 580)
 
-[node name="Bridge" parent="." instance=ExtResource("16_iwr0g")]
-position = Vector2(384, 107)
-scale = Vector2(1.38571, 1.25)
+[node name="LargeTree17" parent="." instance=ExtResource("3_dnkej")]
+material = SubResource("ShaderMaterial_st6wj")
+position = Vector2(1057, 451)
 
-[node name="Bridge2" parent="." instance=ExtResource("16_iwr0g")]
-position = Vector2(698, 690)
-scale = Vector2(2.15714, 1.5625)
+[node name="SmallTree6" parent="." instance=ExtResource("5_wtwp4")]
+material = SubResource("ShaderMaterial_35oph")
+position = Vector2(1451, 693)
 
-[node name="Bridge3" parent="." instance=ExtResource("16_iwr0g")]
-position = Vector2(1.25, 375.5)
-scale = Vector2(1.52857, 1.5625)
+[node name="SmallTree7" parent="." instance=ExtResource("5_wtwp4")]
+material = SubResource("ShaderMaterial_h8f0m")
+position = Vector2(1186, 116)
+
+[node name="SmallTree8" parent="." instance=ExtResource("5_wtwp4")]
+material = SubResource("ShaderMaterial_8n5h7")
+position = Vector2(1069, 730)
+
+[node name="LargeTree18" parent="." instance=ExtResource("3_dnkej")]
+material = SubResource("ShaderMaterial_tdo0a")
+position = Vector2(1079, 773)

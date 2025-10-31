@@ -1,0 +1,13 @@
+=> END
+
+~ start_chicken_pasture_box
+
+Pasture Box: [[Hi|Hello|Howdy|こんにちは！]]、あなたの動物たちはお腹が空いていますよ！
+Pasture Box: 鶏に餌をあげますか？
+- はい
+	Marlow:はい！さあ、餌をあげましょう！
+	do GameDialogueManager.action_feed_animals()
+- いいえ
+	Marlow:いいえ、今は餌をあげたくないです。
+
+=> END
