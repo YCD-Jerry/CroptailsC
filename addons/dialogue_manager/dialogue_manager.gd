@@ -10,7 +10,7 @@ const DMSettings = preload("./settings.gd")
 const DMCompiler = preload("./compiler/compiler.gd")
 const DMCompilerResult = preload("./compiler/compiler_result.gd")
 const DMResolvedLineData = preload("./compiler/resolved_line_data.gd")
-var current_language = "en"  
+# 已删除冗余的current_language变量
 
 
 ## Emitted when a dialogue balloon is created and dialogue starts
@@ -431,20 +431,25 @@ func show_example_dialogue_balloon(resource: DialogueResource, title: String = "
 	return balloon
 
 
-# 在DialogueManager的show_dialogue_balloon函数中，替换原来的路径切换代码
+# 修改后的show_dialogue_balloon函数（用Tab缩进）
 func show_dialogue_balloon(resource: DialogueResource, title: String = "", extra_game_states: Array = []) -> Node:
-	# 调用GameDialogueManager加载语言对应的文件
-	var new_resource = GameDialogueManager.load_dialogue(resource.resource_path)
+	# 正确获取gdm单例（使用AutoLoad注册名称）
+	var game_dialogue_manager = Engine.get_singleton("GameDialogueManager")
+	if not game_dialogue_manager:
+		printerr("Error: GameDialogueManager 未作为AutoLoad单例注册！")
+		return show_dialogue_balloon_scene(_get_example_balloon_path(), resource, title, extra_game_states)  # 用原始资源保底
+	
+	# 调用gdm的加载函数
+	var new_resource = game_dialogue_manager.load_dialogue(resource.resource_path)
 	if not new_resource:
-		printerr("DialogueManager加载失败，使用原始文件")
-		new_resource = resource  # 加载失败时用原始文件保底
-	   
-	# 后续显示逻辑不变，用new_resource
+		printerr("加载语言文件失败，使用原始文件：", resource.resource_path)
+		new_resource = resource
+	
+	# 后续显示逻辑不变
 	var balloon_path: String = DMSettings.get_setting(DMSettings.BALLOON_PATH, _get_example_balloon_path())
 	if not ResourceLoader.exists(balloon_path):
 		balloon_path = _get_example_balloon_path()
 	return show_dialogue_balloon_scene(balloon_path, new_resource, title, extra_game_states)
-
 
 
 ## Show a given balloon scene
