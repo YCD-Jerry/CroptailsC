@@ -1,5 +1,8 @@
 extends Node
 
+# 新增：语言变化信号（传递新语言代码）
+signal language_changed(new_language)
+
 # 必须预加载DialogueResource类型，否则会报错
 const DialogueResource = preload("res://addons/dialogue_manager/dialogue_resource.gd")
 
@@ -45,7 +48,17 @@ func load_dialogue(resource_path: String) -> DialogueResource:
 	
 	return load(target_path)
 
-# 语言切换函数（无需同步到dm）
+# game_dialogue_manager.gd 中修改 switch_language 函数
 func switch_language():
 	current_language = "ja" if current_language == "en" else "en"
 	print("GameDialogueManager语言已切换到：", current_language)
+	
+	# 关闭所有现有对话气泡（关键：确保下次打开对话时加载新语言）
+	var dialogue_manager = Engine.get_singleton("DialogueManager")
+	if dialogue_manager:
+		# 遍历当前场景中所有对话气泡节点（假设气泡节点名含"balloon"）
+		for balloon in get_tree().get_current_scene().get_children():
+			if "balloon" in balloon.name:
+				balloon.queue_free()  # 销毁旧气泡
+	
+	language_changed.emit(current_language)  # 可选：保留信号用于其他UI更新
